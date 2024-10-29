@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "GeoTopoMethods"
+version = "0.0"
+readme = "README.md"
+authors = [{name = "Faisal Jayousi", email = "fjayousi90@gmail.com"}]
+maintainers = [{name = "Faisal Jayousi", email = "fjayousi90@gmail.com"}]
+
+
+[tool.setuptools.packages.find]
+where = ["."]
+exclude = ["tests*", "data*", "examples*"]
+
+
+[tool.black]
+line-length = 79
+target-version = ['py37']
+
+
+[tool.isort]
+profile = "black"
+line_length = 79
